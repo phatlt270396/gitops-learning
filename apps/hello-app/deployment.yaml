@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hello-app
-        image: registry.gitlab.com/tanphat.it270396/hello-app:latest
+        image: registry.gitlab.com/tanphat.it270396/hello-app:e3f2558e
         ports:
         - containerPort: 8080
 ---
