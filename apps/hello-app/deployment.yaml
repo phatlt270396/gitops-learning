@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hello-app
-        image: registry.gitlab.com/tanphat.it270396/hello-app:e3f2558e
+        image: registry.gitlab.com/tanphat.it270396/hello-app:986972ac
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
