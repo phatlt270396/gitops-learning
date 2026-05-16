@@ -1,0 +1,11 @@
+replicaCount: 2
+
+image:
+  repository: registry.gitlab.com/tanphat.it270396/hello-app
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
