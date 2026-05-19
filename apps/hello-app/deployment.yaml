@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hello-app
-        image: registry.gitlab.com/tanphat.it270396/hello-app:8068bec1
+        image: registry.gitlab.com/tanphat.it270396/hello-app:b00b4e52
         imagePullPolicy: Always
         envFrom:
         - configMapRef:
