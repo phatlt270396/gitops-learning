@@ -18,6 +18,9 @@ spec:
       - name: hello-app
         image: registry.gitlab.com/tanphat.it270396/hello-app:8068bec1
         imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: hello-app-config
         ports:
         - containerPort: 8080
 ---
