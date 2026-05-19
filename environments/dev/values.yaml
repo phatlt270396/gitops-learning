@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  tag: latest
+  tag: e4851db4
   pullPolicy: Always
 
 config:
