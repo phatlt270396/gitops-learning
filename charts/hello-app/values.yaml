@@ -15,6 +15,7 @@ config:
   LOG_LEVEL: "INFO"
   GREETING: "Hello"
   DB_HOST: "postgres.default.svc.cluster.local"
+  STARTUP_TIME: "0"
 
 secrets:
   API_KEY: "demo-api-key-do-not-commit-real-secret"
