@@ -1,3 +1,11 @@
 replicaCount: 5
-image:
-  tag: latest
+
+config:
+  APP_VERSION: "v2.0-prod"
+  LOG_LEVEL: "WARN"
+  GREETING: "Production"
+  DB_HOST: "postgres.prod.svc.cluster.local"
+
+secrets:
+  API_KEY: "prod-api-key-replace-with-real"
+  DB_PASSWORD: "prod-password-replace-with-real"
