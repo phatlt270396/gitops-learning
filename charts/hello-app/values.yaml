@@ -2,7 +2,7 @@ replicaCount: 3
 
 image:
   repository: registry.gitlab.com/tanphat.it270396/hello-app
-  tag: latest
+  tag: 5fc595e8
   pullPolicy: Always
 
 service:
