@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  tag: latest
+  tag: 42956f4e
   pullPolicy: Always
 
 config:
