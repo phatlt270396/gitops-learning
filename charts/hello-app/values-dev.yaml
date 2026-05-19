@@ -1,3 +1,11 @@
 replicaCount: 1
-image:
-  tag: latest
+
+config:
+  APP_VERSION: "v2.0-dev"
+  LOG_LEVEL: "DEBUG"
+  GREETING: "DEV"
+  DB_HOST: "postgres.dev.svc.cluster.local"
+
+secrets:
+  API_KEY: "dev-api-key-for-testing"
+  DB_PASSWORD: "dev-password"
