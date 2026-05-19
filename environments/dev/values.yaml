@@ -1,0 +1,27 @@
+replicaCount: 1
+
+image:
+  tag: latest
+  pullPolicy: Always
+
+config:
+  APP_VERSION: "dev"
+  LOG_LEVEL: "DEBUG"
+  GREETING: "DEV - Hello, World!"
+  DB_HOST: "postgres-dev.dev.svc.cluster.local"
+  STARTUP_TIME: "0"
+
+secrets:
+  API_KEY: "dev-api-key-not-secret"
+  DB_PASSWORD: "dev-password"
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 100m
+    memory: 128Mi
+
+autoscaling:
+  enabled: false

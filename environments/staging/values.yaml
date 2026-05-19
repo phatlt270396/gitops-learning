@@ -1,0 +1,30 @@
+replicaCount: 2
+
+image:
+  tag: latest
+  pullPolicy: Always
+
+config:
+  APP_VERSION: "staging"
+  LOG_LEVEL: "INFO"
+  GREETING: "STAGING - Hello, World!"
+  DB_HOST: "postgres-staging.staging.svc.cluster.local"
+  STARTUP_TIME: "0"
+
+secrets:
+  API_KEY: "staging-api-key"
+  DB_PASSWORD: "staging-password"
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 250m
+    memory: 256Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 70

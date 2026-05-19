@@ -1,0 +1,30 @@
+replicaCount: 3
+
+image:
+  tag: latest
+  pullPolicy: Always
+
+config:
+  APP_VERSION: "prod"
+  LOG_LEVEL: "WARN"
+  GREETING: "Hello (PROD)"
+  DB_HOST: "postgres-prod.prod.svc.cluster.local"
+  STARTUP_TIME: "0"
+
+secrets:
+  API_KEY: "prod-api-key-replace-with-real"
+  DB_PASSWORD: "prod-password-replace-with-real"
+
+resources:
+  requests:
+    cpu: 200m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 60
