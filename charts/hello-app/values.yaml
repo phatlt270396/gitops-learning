@@ -19,3 +19,27 @@ config:
 secrets:
   API_KEY: "demo-api-key-do-not-commit-real-secret"
   DB_PASSWORD: "demo-password-123"
+  
+probes:
+  liveness:
+    path: /healthz
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    failureThreshold: 3
+  readiness:
+    path: /ready
+    initialDelaySeconds: 2
+    periodSeconds: 5
+    failureThreshold: 3
+  startup:
+    path: /ready
+    periodSeconds: 5
+    failureThreshold: 30
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
