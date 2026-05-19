@@ -1,11 +1,21 @@
-replicaCount: 3
+replicaCount: 2
 
 image:
-  repository: registry.gitlab.com/tanphat.it270396/hello-app
-  tag: 5fc595e8
+  repository: registry.gitlab.com/<gitlab-username>/hello-app
+  tag: latest
   pullPolicy: Always
 
 service:
   type: ClusterIP
   port: 80
   targetPort: 8080
+
+config:
+  APP_VERSION: "v2.0-helm"
+  LOG_LEVEL: "INFO"
+  GREETING: "Hello"
+  DB_HOST: "postgres.default.svc.cluster.local"
+
+secrets:
+  API_KEY: "demo-api-key-do-not-commit-real-secret"
+  DB_PASSWORD: "demo-password-123"
