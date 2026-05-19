@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  tag: e4851db4
+  tag: 42956f4e
   pullPolicy: Always
 
 config:
