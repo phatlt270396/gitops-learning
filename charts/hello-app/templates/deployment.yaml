@@ -19,7 +19,9 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         envFrom:
         - configMapRef:
-            name: hello-app-config
+            name: {{ .Release.Name }}-config
+        - secretRef:
+            name: {{ .Release.Name }}-secret
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         
         ports:
